@@ -40,9 +40,6 @@ router.post("/signup", async (req, res) => {
             { expiresIn: "3d" }
         );
 
-        user.lastActive = new Date();
-        await user.save();
-
         res.json({
             message: "SignUp sucessful",
             token,

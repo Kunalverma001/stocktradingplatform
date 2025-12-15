@@ -142,6 +142,10 @@ export default function Signup() {
         `${import.meta.env.VITE_BACKEND_URL}/api/signup`,
         form
       );
+
+      console.log("Signup payload:", {
+        form
+      });
       setToast({
         show: true,
         message: "Account created successflly",

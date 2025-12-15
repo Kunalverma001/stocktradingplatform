@@ -99,7 +99,7 @@ export default function TradeWindow({ stock, onClose, mode, onTradeSuccess }) {
             <span style={{ color: mode === "buy" ? "#387ed0" : "red" }}>
               {mode.toUpperCase()}
             </span>{" "}
-            <i>'{stock.name}'</i>
+            <i>'{stock.symbol}'</i>
           </h2>
         </div>
         <form onSubmit={handleSubmit} className="trade-window-form">
