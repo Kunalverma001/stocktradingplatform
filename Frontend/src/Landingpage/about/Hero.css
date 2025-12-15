@@ -1,0 +1,44 @@
+.hero-main{
+  padding-left: 1rem;  
+  padding-right: 1rem;     
+  width: 1100px;
+  max-width: 100%;    
+  box-sizing: border-box; 
+}
+
+.hero-heading {
+    text-align: center;
+    padding-top: clamp(80px, 10vw, 150px);
+    padding-bottom: clamp(50px, 6vw, 100px);
+    border-bottom: 1px solid #eee;
+}
+.hero-heading h2{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #424242;
+}
+.about-history{
+  margin: 0;
+  padding: 0;
+  padding-top: clamp(40px, 8vw, 80px);
+}
+.mini-container{
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.mini-container p{
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #424242;
+}
+.mini-container a{
+  color: #387ed1;
+  cursor: pointer;
+  text-decoration: none;
+}
+.mini-container a:hover{
+  color: #444;
+}

@@ -1,0 +1,99 @@
+/* =========================
+   FUNDS CONTAINER
+========================= */
+.funds-container {
+  padding: 1rem 1.25rem;
+}
+
+/* HEADERS */
+.funds-head,
+.trans-head {
+  margin-bottom: 1.25rem;
+}
+
+.funds-head h2,
+.trans-head h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+.funds-available,
+.funds-withdraw {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.funds-available .col,
+.funds-withdraw .col {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid #e6e9ef;
+  text-align: center;
+}
+
+.funds-available p,
+.funds-withdraw p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.funds-available h3,
+.funds-withdraw h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #387ed0;
+}
+
+/* =========================
+   TRANSACTIONS TABLE
+========================= */
+.trans-history {
+  overflow-x: auto;
+}
+
+.trans-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trans-table th {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.85rem;
+  text-align: left;
+  color: #333;
+  border-bottom: 1px solid #e6e9ef;
+}
+
+.trans-table td {
+  padding: 0.85rem;
+  font-size: 0.85rem;
+  color: #444;
+  border-bottom: 1px solid #f0f2f6;
+}
+
+td.green {
+  color: #16a34a;
+}
+
+td.red {
+  color: #dc2626;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .funds-available,
+  .funds-withdraw {
+    grid-template-columns: 1fr;
+  }
+}

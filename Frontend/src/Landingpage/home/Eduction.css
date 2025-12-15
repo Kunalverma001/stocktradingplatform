@@ -1,0 +1,39 @@
+.education-main {
+  padding-left: 1rem;  
+  padding-right: 1rem;  
+  padding-bottom: clamp(3rem, 10vw, 10rem);       
+  box-sizing: border-box; 
+}
+
+.eductaion-first{
+    margin-bottom: clamp(3rem,5vw,0rem);
+
+}
+
+.education-second{
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+}
+
+.education-second h2{
+    font-size:1.5rem; 
+    line-height: 1.5;
+    color: #424242;
+    margin-bottom:2rem ;
+}
+
+.education-second p{
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #424242;
+    margin-bottom: 1rem;
+}
+.education-second a{
+    text-decoration: none;
+    color: #387ed1;
+}
+.education-second-one,.education-second-two{
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+}

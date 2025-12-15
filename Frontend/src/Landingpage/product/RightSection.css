@@ -1,0 +1,39 @@
+.RightSection-container{
+    padding-top: clamp(5rem, 10vw, 7rem);
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.RightSection-main{
+    align-items: center;
+}
+.RightSection-second img{
+    width: clamp(80%,100%,100%);
+}
+.RightSection-first{
+    padding-top: clamp(0rem,5vw,1rem);
+    padding-right: clamp(1rem,8vw,7rem);
+}
+.RightSection-first a{
+    text-decoration: none;
+    color: #387ed1;
+    font-weight: 500;
+}
+.RightSection-first a:hover{
+    color: #424242;
+}
+.RightSection-first h2{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #424242;
+}
+.RightSection-first p{
+    color: #424242;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-weight: 400;
+}

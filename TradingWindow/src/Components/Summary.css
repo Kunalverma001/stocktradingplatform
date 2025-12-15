@@ -1,0 +1,204 @@
+.summary-container {
+  width: 100%;
+}
+
+/* Username section */
+.username-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.summary-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+/* Summary card */
+.summary-section {
+  width: 100%;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  border: 1px solid #e7e7e7;
+  transition: 0.2s ease;
+}
+
+.summary-section:hover {
+  transform: translateY(-3px);
+}
+
+/* Card Title */
+.summary-section h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+/* Data container */
+.summary-data {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+/* Left section in card */
+.summary-data-first span p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.summary-data-first span p small {
+  font-size: 0.9rem;
+  margin-left: 5px;
+  color: green;
+}
+
+.summary-data-second p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+/* MINI ANALYTICS SECTION */
+.analytics-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.analytics-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  border: 1px solid #e7e7e7;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.analytics-card:hover {
+  transform: translateY(-4px);
+}
+
+.analytics-card h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.analytics-card p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #387ed0;
+}
+
+/* PREMIUM PIE CHART */
+.piechart-wrapper {
+  margin-top: 2rem;
+  padding: 1.2rem 1rem;
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.06);
+}
+
+.piechart-header h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.2rem;
+}
+
+.piechart-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* PIE CHART LEFT SIDE */
+.piechart-chart {
+  flex: 1;
+  height: 260px;
+  min-width: 250px;
+}
+
+/* LEGEND RIGHT SIDE */
+.piechart-legend {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.legend-name {
+  flex: 1;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.legend-value {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #387ed0;
+  font-weight: 600;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .piechart-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .piechart-chart {
+    height: 220px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 576px) {
+  .analytics-card p {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .summary-section {
+    padding: 1rem;
+  }
+
+  .summary-data {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .summary-data-first span p {
+    font-size: 1.3rem;
+  }
+
+  .summary-data-first p,
+  .summary-data-second p {
+    font-size: 0.85rem;
+  }
+}

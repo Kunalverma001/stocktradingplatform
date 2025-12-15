@@ -1,0 +1,68 @@
+.holdings-container {
+  padding: 1rem 1.25rem;
+}
+
+/* HEADER */
+.holdings-container h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.9rem;
+  text-align: left;
+  color: #333;
+  border-bottom: 1px solid #e6e9ef;
+}
+
+.table tbody td {
+  padding: 0.85rem;
+  font-size: 0.85rem;
+  color: #444;
+  border-bottom: 1px solid #f0f2f6;
+}
+
+.profit {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.loss {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* =========================
+   HOLDING SUMMARY
+========================= */
+.holding-value-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e6e9ef;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.holding-value-section h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .holding-value-section {
+    grid-template-columns: 1fr;
+  }
+}

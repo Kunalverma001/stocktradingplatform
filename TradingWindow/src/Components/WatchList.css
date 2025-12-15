@@ -1,0 +1,193 @@
+.watchlist-container {
+  padding: 0 ;
+  border-right: 1px solid #eee;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.search-container {
+  display: flex;
+  position: relative;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.search {
+  width: 100%;
+  border-style: none;
+  outline: none;
+  color: #424242;
+}
+.search-clear {
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #999;
+}
+.search-clear:hover {
+  color: #000;
+}
+
+.no-results {
+  padding: 12px;
+  color: #999;
+  font-size: 14px;
+}
+.count p {
+  margin: 0;
+}
+.stocks-container ul {
+  padding: 0 1rem;
+  margin: 0;
+}
+
+/* ===== Modern Watchlist UI ===== */
+
+.watchlist-item-new {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.5fr;
+  padding: 10px 14px;
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.25s ease;
+  border-radius: 10px;
+  margin-top: 0.5rem ;
+  background: #ffffff;
+}
+
+.watchlist-item-new:hover {
+  background: #d7d8da;
+}
+
+/* GRID AREAS */
+
+.wl-middle {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 2px;
+}
+.wl-right {
+  text-align: right;
+}
+
+/* SYMBOL */
+.wl-symbol {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* PRICE */
+.wl-price {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* PERCENT */
+.wl-percent {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+/* COLORS */
+.green { color: #1ea83c; }
+.red { color: #d83c3c; }
+
+/* BUY / SELL BUTTONS */
+.wl-actions {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.wl-buy,
+.wl-sell {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.wl-buy {
+  background: #1ea83c;
+}
+.wl-buy:hover {
+  background: #17912f;
+}
+
+.wl-sell {
+  background: #d83c3c;
+}
+.wl-sell:hover {
+  background: #b32f2f;
+}
+
+/* FLASH ANIMATION */
+.flash-green {
+  animation: flashGreen 0.5s ease;
+}
+.flash-red {
+  animation: flashRed 0.5s ease;
+}
+
+@keyframes flashGreen {
+  from { background: rgba(0, 255, 0, 0.25); }
+  to { background: transparent; }
+}
+
+@keyframes flashRed {
+  from { background: rgba(255, 0, 0, 0.25); }
+  to { background: transparent; }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .watchlist-item-new {
+    grid-template-columns: 1fr 1fr 0.3fr;
+    padding: 8px 10px;
+  }
+
+  .wl-symbol {
+    font-size: 0.85rem;
+  }
+
+  .wl-price {
+    font-size: 0.85rem;
+  }
+
+  .wl-percent {
+    font-size: 0.75rem;
+  }
+}
+
+@keyframes flashGreen {
+  0% {
+    background-color: rgba(0, 255, 0, 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes flashRed {
+  0% {
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}

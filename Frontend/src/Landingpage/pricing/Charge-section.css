@@ -1,0 +1,37 @@
+.Charge-container{
+    width: 1100px;
+    max-width: 100%;   
+    box-sizing: border-box;
+    padding: 0;
+    padding-top: 80px;
+}
+.Charge-main{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.Charge-main img{
+    width: 250px;
+    margin-bottom: 15px;
+}
+.Charge-main h2{
+    font-size: 1.75rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #424242;
+}
+.Charge-main p{
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #666;
+}
+@media (max-width:767px) {
+    .Charge-container{
+        padding-top: 50px;
+    }
+    .Charge-main img{
+        width: 150px;
+}
+}

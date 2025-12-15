@@ -1,0 +1,73 @@
+.s-hero-container{
+    margin-top: 4rem;
+    padding: 40px 24px;
+    background-color: #f6f6f6;
+}   
+.s-hero-ticket{
+    padding-bottom: 2.25rem;
+}
+.s-hero-first a{
+    font-size: 36px;
+    font-weight: 600;
+    color: #424242;
+    text-decoration: none;
+    line-height: 36px;
+}
+.s-hero-second{
+    text-align: right;
+}
+.ticketbtn{
+    padding: 8px 16px;
+    background-color: #387ed1;
+    border-style: none;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.s-text-area{
+    position: relative;
+    display: flex;
+    background-color: #ffff;
+    border: 1px solid #e0e7ef;
+    padding: 0px 24px;
+    color: #424242;
+    gap: 0.5rem;
+    border-radius: 3px;
+}
+.s-text-area span{
+    position: relative;
+    margin: auto;
+    color: #666;
+}
+
+#support-text-input{
+    width: 100%;
+    border-style: none;
+    padding: 16px 0px 16px 4px;
+}
+#support-text-input::placeholder{
+   color: #939393;
+   font-weight: 400;
+}
+#support-text-input:focus{
+    outline: none;
+}
+@media (max-width:768px) {
+    .ticketbtn{
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+    .s-hero-first a{
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+@media (max-width:372px){
+    .s-hero-first a{
+        font-size: 20px;
+        line-height: 20px;
+    }
+}

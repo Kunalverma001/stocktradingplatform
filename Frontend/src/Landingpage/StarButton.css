@@ -1,0 +1,21 @@
+.star-btn {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #387ed0;
+  color: white;
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+
+.star-btn:hover {
+  transform: scale(1.12);
+  background: #2f6bb8;
+}

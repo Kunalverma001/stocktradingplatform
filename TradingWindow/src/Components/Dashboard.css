@@ -1,0 +1,104 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-main {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+  height: calc(100vh - 60px); /* navbar height */
+  position: relative;
+  overflow: hidden;
+}
+
+.watchlist-section,
+.dashboard-section {
+  height: 100%;
+  overflow-y: auto;
+  min-height: 0;
+}
+.dashboard-section {
+  padding: 0 1.5rem;
+  padding-top: 1rem;
+}
+
+.mobile-watchlist-drawer {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background: #ffffff;
+  overflow-y: auto;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.25);
+  transition: left 0.35s ease;
+  z-index: 9999 !important;
+}
+
+.mobile-watchlist-drawer.open {
+  left: 0;
+}
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1500;
+}
+
+.drawer-toggle {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #387ed0;
+  color: #fff;
+  height: 40px;
+  width: 28px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  z-index: 5000;
+  cursor: pointer;
+}
+
+.drawer-toggle.open {
+  left: 300px; /* Same as drawer width */
+}
+.intro-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #387ed0, #4da3ff);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.intro-toggle:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 1200px) {
+  .mobile-watchlist-drawer,
+  .drawer-overlay,
+  .drawer-toggle {
+    display: none !important;
+  }
+}
+
+/* small tweak for MarketStrip inside drawer */
+.mobile-watchlist-drawer .TopBar-first,
+.mobile-watchlist-drawer .mobile-market-strip {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}

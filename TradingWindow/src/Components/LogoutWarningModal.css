@@ -1,0 +1,204 @@
+/* ===============================
+   OVERLAY — CENTERED IN DASHBOARD
+================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(6px);
+
+  /* CENTERING */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3000;
+  animation: overlayFade 0.25s ease-out;
+}
+
+/* ===============================
+   MODAL CONTAINER (WIDER)
+================================ */
+.modal-box {
+  width: 640px;              /* 🔥 wider */
+  max-width: 90vw;
+  background: #ffffff;
+  border-radius: 20px;
+
+  padding: 34px 36px 30px;   /* more breathing room */
+
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+
+  position: relative;
+  animation: modalPop 0.3s cubic-bezier(0.2, 0.8, 0.3, 1);
+
+  font-family: inherit;
+}
+
+/* ===============================
+   FLOATING WARNING ICON (CENTER TOP)
+================================ */
+.modal-box::before {
+  content: "⚠";
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  box-shadow: 0 16px 36px rgba(220, 38, 38, 0.55);
+}
+
+/* ===============================
+   TITLE
+================================ */
+.modal-box h3 {
+  margin-top: 22px;
+  margin-bottom: 14px;
+
+  font-size: 1.55rem;
+  font-weight: 700;
+  text-align: center;
+
+  color: #111827;
+}
+
+/* ===============================
+   DESCRIPTION TEXT
+================================ */
+.modal-box p {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   DANGER DATA SECTION
+================================ */
+.modal-box ul {
+  margin: 20px 0;
+  padding: 18px 22px;
+
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 14px;
+
+  list-style: none;
+}
+
+.modal-box ul li {
+  font-size: 0.95rem;
+  color: #991b1b;
+  padding: 6px 0;
+  font-weight: 600;
+}
+
+/* ===============================
+   FOOT NOTE
+================================ */
+.modal-box .warning-text {
+  font-size: 0.88rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* ===============================
+   ACTION BUTTONS
+================================ */
+.modal-actions {
+  display: flex;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+/* BASE BUTTON */
+.modal-actions button {
+  flex: 1;
+  height: 46px;
+  border-radius: 14px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* CANCEL */
+.modal-actions button:first-child {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.modal-actions button:first-child:hover {
+  background: #e2e8f0;
+}
+
+/* LOGOUT — DANGER */
+.modal-actions .danger {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: #ffffff;
+
+  box-shadow: 0 14px 30px rgba(220, 38, 38, 0.45);
+}
+
+.modal-actions .danger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(220, 38, 38, 0.6);
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+@keyframes overlayFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===============================
+   MOBILE FALLBACK
+================================ */
+@media (max-width: 640px) {
+  .modal-box {
+    width: 94vw;
+    padding: 26px 20px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+}

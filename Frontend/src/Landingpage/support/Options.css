@@ -1,0 +1,153 @@
+.option-container {
+  padding: 28px 24px 0px;
+}
+.option-list {
+  padding: 20px 0px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.options:hover {
+  transform: scale(1.02);
+}
+
+.options h2 {
+  font-size: 1.125rem;
+  margin: 0;
+  padding: 16px 12px;
+  line-height: 1.5;
+  color: #424242;
+}
+
+#logo-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding: 0px 20px;
+  background-color: #f2f8fe;
+}
+
+.logo-img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+#arrow-img-container {
+  margin-left: auto;
+  padding: 0px 20px;
+}
+
+.arrow-img {
+  width: 30px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-img.open {
+  transform: rotate(-180deg);
+}
+
+.options-detail {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  color: #387ed1;
+  max-height: 0;
+  opacity: 0;
+  overflow-y: auto;
+  padding: 0;
+  transition: all 0.4s ease;
+}
+
+.options-detail.show {
+  opacity: 1;
+  padding: 16px 0 16px 64px;
+}
+
+.options-inner ul li {
+  padding: 8px;
+}
+
+.main-right {
+  padding-left: 3rem;
+}
+.sub-columns {
+  margin-top: 20px;
+}
+.sub-column-first {
+  background-color: #ff91001a;
+  border-left: 8px solid #ff9100;
+  padding: 0.75rem 1.25rem;
+}
+.sub-column-first ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 18px;
+}
+.sub-column-first li {
+  padding: 5px 0px;
+  color: #397dd0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.sub-column-first li a {
+  color: #397dd0;
+}
+.sub-column-first li a:hover {
+  color: #666;
+}
+.sub-column-second {
+  padding: 1.25rem 0;
+}
+.sub-column-second table {
+  width: 100%;
+}
+.sub-column-second table {
+  border: 1px solid #dedee3;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.sub-column-second table thead {
+  background-color: #f6f6f6;
+  color: #424242;
+  font-weight: 500;
+}
+.sub-column-second table th {
+  padding: 0.75rem 1.25rem;
+}
+.sub-column-second table tr td {
+  border-bottom: 1px solid #dedee3;
+  color: #397dd0;
+  padding: 0.75rem 1.25rem;
+}
+.sub-column-second table tr:hover {
+  color: #424242;
+}
+@media (min-width: 992px) {
+  .options-detail {
+    overflow: hidden;
+  }
+}
+@media (max-width: 576px) {
+  .main-right {
+    padding-left: 0;
+  }
+  .options h2{
+    font-size: 1rem;
+  }
+}

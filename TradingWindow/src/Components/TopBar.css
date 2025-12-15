@@ -1,0 +1,36 @@
+.TobBar-container {
+  width: 100%;
+  padding: 0;
+  box-shadow: 0px 0px 4px 2px rgb(236, 235, 235);
+}
+.TopBar-main {
+  height: 100%;
+}
+
+.TopBar-first {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  font-weight: 500;
+  background-color: white;
+  border-right: 1px solid #eee;
+  padding: 1rem 0;
+}
+.TopBar-first p {
+  margin: 0;
+}
+.nifty,
+.sensex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.nifty :nth-child(1) {
+  color: #387ed1;
+}
+.sensex :nth-child(1) {
+  color: #387ed0;
+}
+.menu-main {
+  display: flex;
+}

@@ -1,0 +1,241 @@
+.Menu-container {
+  display: flex;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.7;
+  align-items: center;
+  /* box-shadow: 0px 0px 4px 2px rgb(236, 235, 235); */
+}
+.menu-img img {
+  max-width: 40px;
+}
+.menu-option {
+  margin: 0 auto;
+}
+.menu-option ul {
+  display: flex;
+  gap: 2.25rem;
+  margin: 0;
+  padding: 0;
+}
+.menu-option ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu-option ul li a {
+  text-decoration: none;
+  color: #666;
+  outline: none;
+}
+.menu-option p {
+  margin: 0;
+}
+.menu-option a:hover {
+  color: #387ed0;
+}
+.active-option {
+  color: #387ed0;
+}
+
+.menu-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+.menu-user-profile p {
+  margin: 0;
+}
+.menu-user-profile span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #387ed0;
+  color: white;
+}
+.nav-dropdown button {
+  border-style: none;
+  background-color: white;
+  position: relative;
+}
+
+.nav-mobile {
+  position: absolute;
+  top: 65px;           /* below hamburger */
+  right: 20px;            /* stick to right */
+  width: 180px;        /* nice width */
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  z-index: 9999;
+}
+.nav-mobile ul{
+  padding: 0;
+}
+.nav-mobile ul li{
+  list-style: none;
+  padding: 1rem;
+  border-bottom: 1px solid #666;
+}
+.nav-mobile ul li a{
+  text-decoration: none;
+  color: #666;
+}
+.nav-mobile ul li p{
+  margin: 0;
+}
+/* Show dropdown */
+.nav-mobile.show {
+  max-height: 340px ;
+}
+
+/* PROFILE DROPDOWN WRAPPER */
+.menu-profile-wrapper {
+  position: relative;
+  margin-left: auto;
+}
+
+/* TOP RIGHT PROFILE SECTION */
+.menu-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.menu-user-profile:hover {
+  background: #f0f4ff;
+}
+
+.menu-user-profile span {
+  width: 32px;
+  height: 32px;
+  background: #387ed0;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.profile-arrow {
+  font-size: 12px;
+  color: #666;
+}
+
+/* DROPDOWN */
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 230px;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.25s ease;
+  z-index: 9999;
+}
+
+/* Show dropdown */
+.profile-dropdown.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Header inside dropdown */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  background: #387ed0;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.profile-header h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.profile-header p {
+  margin: 0;
+  font-size: 13px;
+  color: gray;
+}
+
+/* Dropdown buttons */
+.profile-item {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 10px 5px;
+  margin-top: 8px;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #555;
+  cursor: pointer;
+}
+
+.profile-item:hover {
+  background: #f3f4f6;
+}
+
+.logout {
+  color: #d12f2f;
+  font-weight: 600;
+}
+
+
+@media (max-width: 350px) {
+  .nav-mobile {
+    width: 100% !important;
+    right: 0 !important;
+    left: 0 !important;         /* expand */
+    border-radius: 0 !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-mobile {
+      left: 50% !important;
+      right: auto !important;
+      transform: translateX(-50%);
+      width: 90% !important; /* Always visible */
+      border-radius: 8px !important;
+  }
+}
+@media (max-width: 992px) {
+  .menu-user-profile {
+    margin-left: auto;
+  }
+  .menu-img img {
+    width: 100%;
+  }
+}

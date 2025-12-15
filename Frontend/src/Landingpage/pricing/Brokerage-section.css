@@ -1,0 +1,182 @@
+.Brokerage-container{
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: clamp(80px,5vw,100px);
+}
+.Brokerage-navtabs{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.Brokerage-navtabs a{
+    max-width: 160px;
+    width: clamp(30%,5vw,100%);
+    text-align: center;
+    font-size: clamp(1rem,5vw,1.5rem);
+    font-weight: 500;
+    padding: 6px 15px;  
+    color: #387ed1;     
+    text-decoration: none;
+    margin: 0 3px 0 0;
+}
+.Brokerage-navtabs a:hover{
+    color: #666;
+    cursor: pointer;
+
+}
+.tab-fo{
+    display: none;
+}
+.table{
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    line-height: 1.7;
+}
+.table th, .table td{
+    padding: 12px 15px !important; 
+}
+.table th{
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #424242;
+    text-align: left;
+    vertical-align: middle;
+    
+}
+.table td{
+    font-size: 0.875rem;
+    border: none;
+    vertical-align: middle;
+    color: #424242;
+}
+.table tr td:first-child{
+    font-size: 0.9rem;
+    color: #666;
+}
+.table > :not(caption) > tr:nth-of-type(even) > * {
+  background-color: #fafafb !important;
+}
+.equity-data {
+    display: none;
+}
+.currency-data{
+    display: none;
+}
+.commodity-data{
+    display: none;
+} 
+.active{
+    color: #666 !important;
+    border-bottom: 2px solid #387ed1;
+}
+.show{
+    display: block;
+}
+.brokrage-link{
+    font-size: 1.25rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #424242;
+    margin-bottom: 20px;
+}
+.brokrage-link a{
+    color: #387ed1;
+    text-decoration: none;
+}
+.brokrage-link a:hover{
+    color: #424242;
+}
+.account-opening-charge{
+    padding-top: clamp(80px,5vw,100px);
+}
+.account-opening-charge h2{
+    color: #424242;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.free-tag{
+    font-size: 11px;
+    font-weight: 500;
+    color: #fff;
+    padding: 4px 10px;
+    background-color: #4caf50;
+    border-radius: 2px;
+}
+.account-opening-charge .table tr td{
+    color: #424242 !important;
+}
+.demat-charge{
+    padding-top: clamp(80px,5vw,100px);
+}
+.demat-charge h2{
+    color: #424242;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.demat-charge .table tr td{
+    color: #424242 !important;
+}
+.demat-line{
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+.demat-line a{
+    color: #387ed1;
+    text-decoration: none;
+}
+.demat-line a:hover{
+    color: #424242;
+}
+.optional-charge{
+    padding-top: clamp(80px,5vw,100px);
+}
+.optional-charge h2{
+    color: #424242;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.charge-explain{
+    padding-top: clamp(80px,5vw,100px);
+}
+.charge-explain h2{
+    color: #424242;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.end-details p{
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: #424242;
+}
+.text-12{
+    font-size: 0.75rem !important;
+}
+.end-details li{
+    margin-bottom: 5px;
+}
+.disclaimer{
+    padding-bottom: clamp(80px,5vw,100px);
+}
+@media (max-width:796px) {
+    .Brokerage-container{
+        padding-left: clamp(1rem,5vw,0rem);
+        padding-right: clamp(1rem,5vw,0rem);
+    }
+}

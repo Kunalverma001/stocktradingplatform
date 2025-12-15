@@ -1,0 +1,72 @@
+.Universe-container{
+    width: 1100px;
+    max-width: 100%;   
+    box-sizing: border-box;
+    padding-top: clamp(80px, 10vw, 100px);
+}
+.Universe-subheading {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.Universe-subheading p{
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #424242;
+}
+.Universe-subheading a{
+    color: #387ed1;
+    text-decoration: none;
+    font-weight: 500;
+}
+.Universe-subheading a:hover{
+    color: #424242;
+}
+.Universe-second-heading{
+    padding-top: clamp(80px, 10vw, 100px);
+}
+.Universe-second-heading h2{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #000;
+    margin-bottom: 20px;
+}
+.Universe-second-heading p{
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #000;
+    margin-bottom: 15px;
+}
+.Universe-partner{
+    padding-top: clamp(2rem,5vw,3rem);
+}
+.Universe-partner img{
+    height: 55px;
+}
+.Universe-partner .sensibull{
+    height: 40px;
+    margin-bottom: 0.9rem;
+}
+.Universe-partner p{
+    font-size: 0.75rem;
+    line-height: 18px;
+    color: #9b9b9b;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+.Universe-btn{
+    padding-bottom: clamp(80px, 10vw, 100px);
+}
+.Signbtn {
+    padding: 10px 30px;
+    background-color: #387ed1;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    text-decoration: none;
+    margin-top: 2rem;
+}
