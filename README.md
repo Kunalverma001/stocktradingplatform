@@ -1,105 +1,83 @@
-📈 Stock Trading Platform (Full-Stack)
+📈 Stock Trading Platform
 
-A full-stack stock trading platform inspired by Zerodha, built with React, Node.js, Express, and MongoDB, featuring authentication, trading workflows, automated cleanup jobs, and email reminders.
+A full-stack stock trading platform inspired by Zerodha, built using React, Node.js, Express, and MongoDB.
+The project focuses on real-world architecture, authentication, automation, and clean UX.
 
-This project demonstrates real-world architecture, production-ready practices, and end-to-end ownership.
+✨ Features
 
-🔥 Features
-👤 Authentication
+🔐 JWT-based authentication (signup & login)
 
-User signup & login with JWT
+📊 Trading dashboard with holdings, positions, orders & funds
 
-Secure password hashing
+💱 Buy & sell stocks from a watchlist
 
-Session persistence using tokens
+⚠️ Logout warning for data retention policy
 
-📊 Trading Dashboard
+🧹 Automatic cleanup of inactive user data after 5 days
 
-Buy & sell stocks from watchlist
+📧 Reminder email sent on 4th day of inactivity
 
-Holdings, positions, orders & funds tracking
+🌐 Multi-app setup (Main site + Dashboard + Backend)
 
-Real-time UI updates
 
-Safe handling of empty states
 
-🧹 Automated Inactivity Cleanup
-
-User trading data is automatically deleted after 5 days of inactivity
-
-Includes:
-Holdings
-Positions
-Orders
-Funds
-
-Cleanup runs via cron job
-
-📧 Day-4 Reminder Email
-
-Reminder email sent on 4th day of inactivity
-Warns user before data deletion
-Email sent only once (anti-spam logic)
-Reminder resets on next login
-
-⚠️ Logout Warning
-
-User warned at logout about 5-day deletion policy
-Professional confirmation modal
-
-🌐 Multi-App Architecture
-Main Website (marketing / landing)
-Trading Dashboard
-Backend API
-Connected via environment-based URLs
-
-🏗️ Project Architecture
+🏗️ Project Structure
 stocktradingplatform/
-├── frontend/        # Main website (React + Vite)
-├── tradingwindow/   # Trading dashboard (React + Vite)
-├── backend/         # Node.js + Express API
-└── README.md
 
+├── frontend/        # Main website
 
-Each app is independently configurable using environment variables.
+├── tradingwindow/   # Trading dashboard
+
+├── backend/         # REST API & cron jobs
+
 
 🛠️ Tech Stack
-Frontend
 
-React
-Vite
-Axios
-CSS
-Backend
-Node.js
-Express
-MongoDB (Mongoose)
-JWT Authentication
-Node-cron
-Nodemailer
+Frontend: React, Vite, Axios
 
-Dev & Tooling
-Git & GitHub
-Environment variables
-REST APIs
+Backend: Node.js, Express, MongoDB
 
-🔐 Environment Variables
+Auth & Jobs: JWT, Node-cron, Nodemailer
 
-Each app has its own .env file (not committed).
 
-Backend (/backend/.env)
-PORT=3002
-MONGO_URL=your_mongo_url
-JWT_SECRET=your_secret
-EMAIL_USER=your_email
-EMAIL_PASS=your_email_app_password
-MAIN_APP_URL
-DASHBOARD_URL
+🔐 Environment Setup
 
-Frontend (/frontend/.env)
-VITE_BACKEND_URL
-VITE_DASHBOARD_URL
+Each app uses its own .env file (not committed).
 
-Dashboard (/tradingwindow/.env)
-VITE_BACKEND_URL
-VITE_MAIN_APP_URL
+Example:
+
+VITE_BACKEND_URL= http://localhost:3002
+
+VITE_DASHBOARD_URL= http://localhost:5174
+
+
+▶️ Run Locally
+git clone https://github.com/Kunalverma001/stocktradingplatform.git
+cd stocktradingplatform
+
+# Backend
+cd backend && npm install && npm run dev
+
+# Frontend
+cd frontend && npm install && npm run dev
+
+# Dashboard
+cd tradingwindow && npm install && npm run dev
+
+
+🧠 Highlights
+
+Designed with production practices (env-based URLs, cleanup jobs)
+
+Handles user inactivity & data lifecycle
+
+Clean separation of concerns across apps
+
+Fully deployable without code changes
+
+
+
+👤 Author
+
+Kunal Verma
+GitHub: https://github.com/Kunalverma001
