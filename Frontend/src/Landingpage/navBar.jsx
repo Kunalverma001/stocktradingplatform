@@ -175,7 +175,7 @@ function NavBar({ isLoggedIn, setIsLoggedIn }) {
                   className="close-btn"
                   onClick={() => setIsOpen(!isOpen)}
                 >
-                  <i class="fa-solid fa-xmark"></i>
+                  <i className="fa-solid fa-xmark"></i>
                 </button>
                 <div className="">
                   <ul className="mv-nav-links row g-0 m-0 p-3">

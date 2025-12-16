@@ -9,7 +9,7 @@ export default function StarButton() {
 
   return (
     <button className="star-btn" onClick={openPopup}>
-      <i class="fa-solid fa-star"></i>
+      <i className="fa-solid fa-star"></i>
     </button>
   );
 }

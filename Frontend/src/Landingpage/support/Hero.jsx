@@ -16,7 +16,7 @@ function Hero() {
       </div>
       <div className="s-text-area">
         <span>
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
         </span>
         <input
           id="support-text-input"

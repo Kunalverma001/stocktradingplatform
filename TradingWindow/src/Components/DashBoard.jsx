@@ -39,7 +39,7 @@ export default function Dashboard() {
         title="Dashboard Guide"
         onClick={openDashboardIntro}
       >
-        <i class="fa-solid fa-star"></i>
+        <i className="fa-solid fa-star"></i>
       </button>
       <div className="container-fluid dashboard-container p-0">
         <div className="dashboard-main row g-0">

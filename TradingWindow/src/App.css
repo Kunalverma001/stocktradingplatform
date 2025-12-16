@@ -3,5 +3,5 @@
     padding: 0;
     font-family: 'Inter', 'sans-serif';
     min-width: 350px;
-    overflow: hidden;
+    overflow: auto;
 }

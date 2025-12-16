@@ -4,7 +4,7 @@ import "./Hero.css";
 function Hero() {
   return (
     <div className=" container-fluid hero-main ">
-      <div class="row hero-heading">
+      <div className="row hero-heading">
         <h2 className="">
           We pioneered the discount broking model in India.
           <br /> Now, we are breaking ground with our technology.
