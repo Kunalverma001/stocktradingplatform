@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 import useDelayedLoader from "../src/Utils/useDelayedLoader";
 
-export default function Signup({setLoading}) {
+export default function Signup({ setLoading }) {
   const navigate = useNavigate();
   const [form, setForm] = useState({ name: "", email: "", password: "" });
   const [step, setStep] = useState(1);
@@ -165,7 +165,7 @@ export default function Signup({setLoading}) {
       setUser(res.data.user);
       localStorage.setItem("user", JSON.stringify(res.data.user));
       localStorage.setItem("auth_token", res.data.token);
-      
+
       navigate("/", { replace: true });
       window.location.reload();
     } catch (err) {

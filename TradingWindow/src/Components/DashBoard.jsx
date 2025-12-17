@@ -13,7 +13,7 @@ import DashboardIntroPopup, { openDashboardIntro } from "./DashboardPopUp";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
-export default function Dashboard({setLoading}) {
+export default function Dashboard({ setLoading }) {
   const [TradeData, setTradeData] = useState(null);
   const [refreshKey, setRefreshKey] = useState(0);
   const [showDrawer, setShowDrawer] = useState(false);
@@ -92,7 +92,7 @@ export default function Dashboard({setLoading}) {
               mode={TradeData.mode}
               onClose={closeWindow}
               onTradeSuccess={handleTradeSuccess}
-              setLoading = {setLoading}
+              setLoading={setLoading}
             />
           )}
         </div>

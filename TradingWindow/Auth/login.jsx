@@ -6,7 +6,7 @@ import { useAuth } from "../src/Context/AuthContext";
 import "./Auth.css";
 import useDelayedLoader from "../src/Utils/useDelayedLoader";
 
-export default function Login({setLoading}) {
+export default function Login({ setLoading }) {
   const [form, setForm] = useState({ email: "", password: "" });
   const [toast, setToast] = useState({
     show: false,

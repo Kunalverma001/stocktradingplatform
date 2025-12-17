@@ -4,7 +4,13 @@ import ToastMessage from "./ToastMessage";
 import api from "../Utils/api";
 import useDelayedLoader from "../src/Utils/useDelayedLoader";
 
-export default function TradeWindow({ stock, onClose, mode, onTradeSuccess, setLoading }) {
+export default function TradeWindow({
+  stock,
+  onClose,
+  mode,
+  onTradeSuccess,
+  setLoading,
+}) {
   const [quantity, setQuantity] = useState("");
   const [total, setTotal] = useState("");
   const [Funds, setFunds] = useState(null);
