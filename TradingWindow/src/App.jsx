@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import ProtectedRoute from "./Routes/ProtectedRoute";
-import AuthLayout from "../Auth/AuthLayout";
+import AuthLayout from "./Auth/AuthLayout";
 import Signup from "./Auth/signup";
 import Login from "./Auth/login";
 import TopBar from "./Components/TopBar";
