@@ -7,7 +7,7 @@ import MainLayout from "./Layout/MainLayout";
 import HomePage from "./Landingpage/home/Homepage.jsx";
 import PricingPage from "./Landingpage/pricing/pricingpage.jsx";
 import SupportPage from "./Landingpage/support/supportPage.jsx";
-import AboutPage from "./Landingpage/about/AboutPage.jsx";
+import AboutPage from "./Landingpage/about/Aboutpage.jsx";
 import ProductPage from "./Landingpage/product/ProductPage.jsx";
 import NotFoundPage from "./Landingpage/NotFoundPage.jsx";
 
