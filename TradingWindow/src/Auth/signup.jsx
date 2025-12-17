@@ -67,7 +67,7 @@ export default function Signup({ setLoading }) {
         `${import.meta.env.VITE_BACKEND_URL}/api/sendotp`,
         {
           email: form.email,
-        }
+        } 
       );
 
       setToast({
@@ -188,7 +188,7 @@ export default function Signup({ setLoading }) {
       <ToastMsg show={toast.show} message={toast.message} type={toast.type} />
       <h2 className="form-title">Create Account</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form>
         {step == 1 && (
           <>
             <input

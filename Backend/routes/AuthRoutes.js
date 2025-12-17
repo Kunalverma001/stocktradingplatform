@@ -125,7 +125,9 @@ router.post("/sendotp", async (req, res) => {
 
         otpStore[email] = otp;
 
-        await sendEmail(email, "Your OTP Code", `Your OTP is: ${otp} Thank you For Signing Up ZeroTrade. `);
+        await sendEmail(email,
+            "Your OTP Code",
+            `Your OTP is ${otp}. It is valid for 5 minutes.`);
         res.json({ message: "OTP sent sucessfully" });
     } catch (err) {
         res.status(500).json({ message: "Failed to send OTP" })

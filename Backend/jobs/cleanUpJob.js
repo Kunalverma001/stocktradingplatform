@@ -35,24 +35,47 @@ cron.schedule("0 2 * * *", async () => {
                 user.email,
                 "⚠️ Your trading data will be deleted in 24 hours",
                 `
-                    Hello ${user.name},
+      <p>Hello <strong>${user.name}</strong>,</p>
 
-                    You have been inactive on Stock Trading App for almost 5 days.
+      <p>
+        You have been inactive on <strong>Stock Trading App</strong> for almost
+        <strong>5 days</strong>.
+      </p>
 
-                    If you do not log in within the next 24 hours, all your trading data
-                    (holdings, positions, orders, and funds) will be permanently deleted.
+      <p>
+        If you do not log in within the next <strong>24 hours</strong>, all your trading data
+        (holdings, positions, orders, and funds) will be
+        <strong>permanently deleted</strong>.
+      </p>
 
-                    Log in now to keep your data safe:
-                    ${process.env.DASHBOARD_URL}
+      <p>
+        <a
+          href="${process.env.DASHBOARD_URL}"
+          style="
+            display: inline-block;
+            padding: 10px 16px;
+            background: #387ed1;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+          "
+        >
+          Log in now to keep your data safe
+        </a>
+      </p>
 
-                    — Stock Trading App Team
-                `
+      <p style="margin-top: 24px;">
+        — <br />
+        <strong>Stock Trading App Team</strong>
+      </p>
+    `
             );
 
             user.reminderSent = true;
             await user.save();
-
         }
+
 
 
         const inactiveUsers = await UsersModel.find({
