@@ -4,7 +4,7 @@ import axios from "axios";
 import ToastMsg from "../Toast/ToastMsg";
 import { useAuth } from "../Context/AuthContext";
 import "./Auth.css";
-import useDelayedLoader from "../Utils/useDelayedLoader";
+import useDelayedLoader from "../Utils/UseDelayedLoader";
 
 export default function Login({ setLoading }) {
   const [form, setForm] = useState({ email: "", password: "" });

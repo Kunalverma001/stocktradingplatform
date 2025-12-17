@@ -4,7 +4,7 @@ import ToastMsg from "../Toast/ToastMsg";
 import { useAuth } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
-import useDelayedLoader from "../Utils/useDelayedLoader";
+import useDelayedLoader from "../Utils/UseDelayedLoader";
 
 export default function Signup({ setLoading }) {
   const navigate = useNavigate();
