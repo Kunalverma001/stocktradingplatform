@@ -1,5 +1,5 @@
 import React from "react";
-import "./openAcc.css";
+import "./OpenAcc.css";
 function OpenAcc() {
   return (
     <div className="container-fluid open-account-container">
