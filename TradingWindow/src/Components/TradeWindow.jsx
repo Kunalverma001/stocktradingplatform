@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import "./TradeWindow.css";
 import ToastMessage from "./ToastMessage";
 import api from "../Utils/api";
+import useDelayedLoader from "../utils/useDelayedLoader";
 
-export default function TradeWindow({ stock, onClose, mode, onTradeSuccess }) {
+export default function TradeWindow({ stock, onClose, mode, onTradeSuccess, setLoading }) {
   const [quantity, setQuantity] = useState("");
   const [total, setTotal] = useState("");
   const [Funds, setFunds] = useState(null);
@@ -13,6 +14,7 @@ export default function TradeWindow({ stock, onClose, mode, onTradeSuccess }) {
     message: "",
     type: "success",
   });
+  const { startLoading, stopLoading } = useDelayedLoader(setLoading);
 
   useEffect(() => {
     async function loadData() {
@@ -71,6 +73,7 @@ export default function TradeWindow({ stock, onClose, mode, onTradeSuccess }) {
 
       const url = mode === "buy" ? "/buyStock" : "/sellStock";
 
+      startLoading();
       const res = await api.post(url, payload);
 
       setToast({ show: true, message: res.data.message, type: "success" });
@@ -86,6 +89,8 @@ export default function TradeWindow({ stock, onClose, mode, onTradeSuccess }) {
         message: "Trade Failed",
         type: "danger",
       });
+    } finally {
+      stopLoading();
     }
   }
   return (

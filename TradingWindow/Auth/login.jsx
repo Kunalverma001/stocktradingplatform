@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import ToastMsg from "../Toast/ToastMsg";
 import { useAuth } from "../src/Context/AuthContext";
 import "./Auth.css";
+import useDelayedLoader from "../src/utils/useDelayedLoader";
 
-export default function Login() {
+export default function Login({setLoading}) {
   const [form, setForm] = useState({ email: "", password: "" });
   const [toast, setToast] = useState({
     show: false,
@@ -12,10 +14,13 @@ export default function Login() {
     type: "success",
   });
   const { setUser } = useAuth();
+  const navigate = useNavigate();
+  const { startLoading, stopLoading } = useDelayedLoader(setLoading);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      startLoading();
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/login`,
         form
@@ -35,7 +40,8 @@ export default function Login() {
         setToast((t) => ({ ...t, show: false }));
       }, 1000);
 
-      window.location.href = `${import.meta.env.VITE_DASHBOARD_URL}`;
+      navigate("/", { replace: true });
+      window.location.reload();
     } catch (err) {
       setToast({
         show: true,
@@ -45,6 +51,8 @@ export default function Login() {
       setTimeout(() => {
         setToast((t) => ({ ...t, show: false }));
       }, 1000);
+    } finally {
+      stopLoading();
     }
   };
 

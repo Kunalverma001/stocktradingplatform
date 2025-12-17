@@ -2,9 +2,12 @@ import { useState } from "react";
 import axios from "axios";
 import ToastMsg from "../Toast/ToastMsg";
 import { useAuth } from "../src/Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import "./Auth.css";
+import useDelayedLoader from "../src/utils/useDelayedLoader";
 
-export default function Signup() {
+export default function Signup({setLoading}) {
+  const navigate = useNavigate();
   const [form, setForm] = useState({ name: "", email: "", password: "" });
   const [step, setStep] = useState(1);
   const [otp, setOtp] = useState("");
@@ -16,6 +19,7 @@ export default function Signup() {
   });
   const { setUser } = useAuth();
   const [passwordRules, setPasswordRules] = useState({});
+  const { startLoading, stopLoading } = useDelayedLoader(setLoading);
 
   const validatePassword = (password) => {
     return {
@@ -57,6 +61,7 @@ export default function Signup() {
     e.preventDefault();
 
     try {
+      startLoading();
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/sendotp`,
         {
@@ -87,12 +92,15 @@ export default function Signup() {
       setTimeout(() => {
         setToast((t) => ({ ...t, show: false }));
       }, 1000);
+    } finally {
+      stopLoading();
     }
   };
 
   const verifyOtp = async (e) => {
     e.preventDefault();
     try {
+      startLoading();
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/verify-otp`,
         {
@@ -121,6 +129,8 @@ export default function Signup() {
       setTimeout(() => {
         setToast((t) => ({ ...t, show: false }));
       }, 1000);
+    } finally {
+      stopLoading();
     }
   };
 
@@ -138,14 +148,11 @@ export default function Signup() {
     }, 1000);
 
     try {
+      startLoading();
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/signup`,
         form
       );
-
-      console.log("Signup payload:", {
-        form
-      });
       setToast({
         show: true,
         message: "Account created successflly",
@@ -158,7 +165,9 @@ export default function Signup() {
       setUser(res.data.user);
       localStorage.setItem("user", JSON.stringify(res.data.user));
       localStorage.setItem("auth_token", res.data.token);
-      window.location.href = "/";
+      
+      navigate("/", { replace: true });
+      window.location.reload();
     } catch (err) {
       setToast({
         show: true,
@@ -168,6 +177,8 @@ export default function Signup() {
       setTimeout(() => {
         setToast((t) => ({ ...t, show: false }));
       }, 1000);
+    } finally {
+      stopLoading();
     }
   };
 

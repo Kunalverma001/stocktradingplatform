@@ -144,6 +144,47 @@
   animation: flashRed 0.5s ease;
 }
 
+.watchlist-skeleton {
+  height: 52px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  position: relative;
+  overflow: hidden;
+}
+
+/* shimmer effect */
+.watchlist-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: translateX(-100%);
+  animation: shimmer 1.4s infinite;
+}
+
+/* subtle divider line */
+.watchlist-skeleton::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 @keyframes flashGreen {
   from { background: rgba(0, 255, 0, 0.25); }
   to { background: transparent; }

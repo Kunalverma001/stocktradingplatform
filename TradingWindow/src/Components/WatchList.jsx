@@ -5,9 +5,12 @@ import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+
 export default function WatchList({ onTradeClick }) {
   const [stocks, setStocks] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(false);
+  
 
   const API_KEY = import.meta.env.VITE_FINNHUB_API_KEY;
   const SYMBOLS = ["AAPL", "TSLA", "MSFT", "AMZN", "GOOGL"];
@@ -22,6 +25,8 @@ export default function WatchList({ onTradeClick }) {
   useEffect(() => {
     async function fetchAll() {
       try {
+        setLoading(true);
+
         const results = [];
 
         const USD_TO_INR = 90;
@@ -46,6 +51,8 @@ export default function WatchList({ onTradeClick }) {
         setStocks(results);
       } catch (err) {
         console.error("API ERROR:", err);
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -64,7 +71,7 @@ export default function WatchList({ onTradeClick }) {
           onChange={(e) => setSearchQuery(e.target.value)}
           className="search"
         />
-        
+
         {searchQuery && (
           <button className="search-clear" onClick={() => setSearchQuery("")}>
             ✕
@@ -78,13 +85,17 @@ export default function WatchList({ onTradeClick }) {
 
       <div className="stocks-container">
         <ul>
-          {filteredStocks.length === 0 ? (
+          {loading ? (
+            Array.from({ length: 5 }).map((_, i) => (
+              <li key={i} className="watchlist-skeleton" />
+            ))
+          ) : filteredStocks.length === 0 ? (
             <p className="no-results">No matching stocks</p>
           ) : (
             filteredStocks.map((stock) => (
               <WatchListItem
-                stock={stock}
                 key={stock.symbol}
+                stock={stock}
                 onTradeClick={onTradeClick}
               />
             ))
