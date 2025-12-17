@@ -2,7 +2,7 @@ import Navbar from "../Landingpage/navBar.jsx";
 import Footer from "../Landingpage/Footer.jsx";
 import PopUp from "../Landingpage/PopUp.jsx";
 import StarButton from "../Landingpage/StarButton.jsx";
-import Toast from "../LandingPage/Toast";
+import Toast from "../Landingpage/Toast";
 import { Outlet } from "react-router-dom";
 
 import { useState,useEffect } from "react";
