@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import ToastMsg from "../Toast/ToastMsg";
-import { useAuth } from "../src/Context/AuthContext";
+import { useAuth } from "../Context/AuthContext";
 import "./Auth.css";
 import useDelayedLoader from "../Utils/useDelayedLoader";
 
