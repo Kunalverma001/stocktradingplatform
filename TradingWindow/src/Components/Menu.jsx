@@ -37,7 +37,7 @@ function confirmLogout() {
   return (
     <div className="Menu-container container-fluid">
       <div className="menu-img">
-        <img src="./media/logo.png" alt="" />
+        <img src="/media/logo.png" alt="" />
       </div>
 
       {/* DESKTOP MENU */}

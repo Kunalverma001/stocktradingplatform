@@ -8,7 +8,7 @@ export default function AuthLayout() {
         {/* LEFT SECTION */}
         <div className="auth-left">
           <img
-            src="./media/logo.svg"
+            src="/media/logo.svg"
             className="auth-logo"
           />
           <h1 className="auth-title">Welcome Back</h1>

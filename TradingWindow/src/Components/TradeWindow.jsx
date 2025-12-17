@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./TradeWindow.css";
 import ToastMessage from "./ToastMessage";
 import api from "../Utils/api";
-import useDelayedLoader from "../src/Utils/useDelayedLoader";
+import useDelayedLoader from "../Utils/useDelayedLoader";
 
 export default function TradeWindow({
   stock,
