@@ -5,6 +5,7 @@ import ToastMsg from "../Toast/ToastMsg";
 import { useAuth } from "../Context/AuthContext";
 import "./Auth.css";
 import useDelayedLoader from "../Utils/UseDelayedLoader";
+import { Link } from "react-router-dom";
 
 export default function Login({ setLoading }) {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -83,7 +84,7 @@ export default function Login({ setLoading }) {
         <button className="auth-btn">Login</button>
 
         <p className="auth-bottom-text">
-          Don't have an account? <a href="/signup">Sign up</a>
+          Don't have an account? <Link to="/signup">Signup</Link>
         </p>
       </form>
     </>
